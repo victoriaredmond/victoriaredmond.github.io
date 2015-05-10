@@ -15,6 +15,17 @@ owl.owlCarousel({
     $(this).find('.owl-next').trigger('click');
 });
 
+
+/* Footer */
+
+$('.footer h1').on('click', function(e){
+    e.preventDefault();
+
+    $("html, body").animate({ scrollTop: 0 }, 300);
+
+});
+
+/* Portfolio */
 $('.portfolio-options button').on('click', function(){
     var parent = $(this).parents('.portfolio');
 
