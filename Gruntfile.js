@@ -154,6 +154,13 @@ module.exports = function (grunt) {
                 }
             }
         },
+        'gh-pages': {
+            options: {
+              base: 'dist',
+              branch: 'master'
+            },
+            src: ['**']
+        },
         useminPrepare: {
             html: '<%= yeoman.jekyll %>/index.html',
             options: {
@@ -250,6 +257,7 @@ module.exports = function (grunt) {
                 'htmlmin'
             ]
         }
+
     });
 
     grunt.renameTask('regarde', 'watch');
