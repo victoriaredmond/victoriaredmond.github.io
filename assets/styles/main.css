@@ -6914,8 +6914,8 @@ button.close {
   text-indent: -9999px;
   height: 46px;
   width: 55px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 8px;
   opacity: .7;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -6942,7 +6942,7 @@ button.close {
   letter-spacing: -1px;
 }
 .overview {
-  padding: 40px 0;
+  padding: 80px 0 60px;
 }
 .overview__item {
   position: relative;
@@ -6953,17 +6953,20 @@ button.close {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 .overview__item .overview__fig {
   width: 100%;
   height: 100%;
-  background: 0 0;
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
 }
 .overview__item .overview__fig h2 {
   color: #fff;
@@ -6974,10 +6977,9 @@ button.close {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -350%);
-  -ms-transform: translate(-50%, -350%);
   transform: translate(-50%, -350%);
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 .overview__item:hover img {
   -webkit-transform: scale(1.1);
@@ -6985,11 +6987,9 @@ button.close {
   transform: scale(1.1);
 }
 .overview__item:hover .overview__fig {
-  background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
 }
 .overview__item:hover .overview__fig h2 {
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   transition-delay: 150ms;
 }
@@ -7033,21 +7033,70 @@ button.close {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.45) 0%, #ffffff 40%, #ffffff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#73ffffff', endColorstr='#ffffff', GradientType=1);
 }
+.owl-hero .owl-item {
+  transition: filter 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.owl-hero .owl-item:not(.active) {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.about {
+  background: #131313;
+  color: #fff;
+  padding: 60px 0;
+  position: relative;
+}
+.about p {
+  margin: 0 0 20px;
+  display: block;
+}
+.about p:first-child:first-letter {
+  font-family: 'Montserrat';
+  font-size: 460%;
+  padding-right: 5px;
+  margin-bottom: -4px;
+  float: left;
+  line-height: 56px;
+}
+.about p:last-child {
+  margin-bottom: 0;
+}
+.about .about-close {
+  margin-bottom: -15px;
+  padding: 15px 0 0;
+}
+.about .about-close a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: color;
+}
+.about .about-close a:hover {
+  color: #fff;
+}
 /* Work */
 .footer {
-  padding: 10px 0 15px;
+  padding: 22px 0 15px;
+}
+.footer h1 {
+  margin: 0 0 5px;
+  line-height: 9px;
+}
+.footer h1 a {
+  display: inline-block;
 }
 .footer a {
   color: #AEAEAE;
-  -moz-transition: all 200ms;
-  -o-transition: all 200ms;
-  -webkit-transition: all 200ms;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: color;
 }
 .footer a:hover {
   color: #3D3D3D;
   text-decoration: none;
 }
+/* Buttons */
 .btn {
   border-radius: 1px;
   font-size: 11px;
@@ -7067,6 +7116,7 @@ button.close {
 .btn-primary:active {
   background: #3D3D3D;
 }
+/* Globals */
 .font-brand {
   font-family: 'Montserrat';
 }
@@ -7074,6 +7124,7 @@ button.close {
 @media (min-width: 768px) {
   .navbar-default {
     border: none;
+    margin: 0;
   }
   .navbar-default .navbar-nav > li > a {
     color: #4D4D4D;
