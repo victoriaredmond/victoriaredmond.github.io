@@ -26,9 +26,9 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
-            recess: {
+            less: {
                 files: ['<%= yeoman.app %>/assets/styles/{,*/}*.less'],
-                tasks: ['recess']
+                tasks: ['less:development']
             },
             livereload: {
                 files: [
@@ -125,6 +125,16 @@ module.exports = function (grunt) {
                 }
             }
         },
+        less: {
+          development: {
+            options: {
+              paths: ["assets/css"]
+            },
+            files: {
+              '<%= yeoman.app %>/assets/styles/main.css': ['<%= yeoman.app %>/assets/styles/main.less']
+            }
+          }
+        },
         // not used since Uglify task does concat,
         // but still available if needed
         /*concat: {
@@ -178,9 +188,9 @@ module.exports = function (grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '<%= yeoman.jekyll %>/assets/images',
-                    src: '{,*/}*.{png,jpg,jpeg}',
-                    dest: '<%= yeoman.dist %>/assets/images'
+                    cwd: '<%= yeoman.jekyll %>/assets/images/',
+                    src: '{,**/}*.{png,jpg,jpeg}',
+                    dest: '<%= yeoman.dist %>/assets/images/'
                 }]
             }
         },
@@ -189,7 +199,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= yeoman.jekyll %>/assets/images',
-                    src: '{,*/}*.svg',
+                    src: '{,***/}*.svg',
                     dest: '<%= yeoman.dist %>/assets/images'
                 }]
             }
@@ -235,6 +245,7 @@ module.exports = function (grunt) {
                     src: [
                         '*.{ico,txt}',
                         '.htaccess',
+                        'CNAME',
                         'assets/images/{,*/}*.{webp,gif}',
                         'assets/fonts/*'
                     ]
@@ -269,7 +280,7 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'clean:server',
-            'recess',
+            'less:development',
             'copy:server',
             'jekyll',
             'livereload-start',
@@ -281,7 +292,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('test', [
         'clean:server',
-        'recess',
+        'less:development',
         'copy:server',
         'jekyll',
         'connect:test',
@@ -290,7 +301,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
-        'recess',
+        'less:development',
         'copy:server',
         'jekyll',
         'useminPrepare',
@@ -307,5 +318,18 @@ module.exports = function (grunt) {
         'jshint',
         'test',
         'build'
+    ]);
+
+    grunt.registerTask('deploy', [
+        'gh-pages'
+    ]);
+
+    grunt.registerTask('full-deploy', [
+        'build',
+        'gh-pages'
+    ]);
+
+    grunt.registerTask('serve', [
+        'server'
     ]);
 };

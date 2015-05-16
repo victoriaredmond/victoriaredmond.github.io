@@ -1,0 +1,15 @@
+---
+layout: portfolio
+category: work
+title: Asos
+thumbnail: /assets/images/work/asos/thumbnail.jpg
+banner: /assets/images/work/asos/banner.jpg
+carousel:
+  - image: /assets/images/work/asos/1.jpg
+  - image: /assets/images/work/asos/2.jpg
+  - image: /assets/images/work/asos/3.jpg
+  - image: /assets/images/work/asos/4.jpg
+  - image: /assets/images/work/asos/5.jpg
+---
+
+Donec suscipit est est, nec tristique metus malesuada id. Fusce vel pellentesque massa, nec interdum sapien. Duis justo velit, dictum a purus ut, tempor tempus sem. Maecenas tempor consequat volutpat. Praesent est dui, euismod vitae dolor vel, convallis venenatis mi. Duis quis finibus risus.

@@ -21,10 +21,10 @@ title: "Victoria Redmond"
 <div class="overview">
     <div class="container">
         <div class="row">
-            {% for post in site.posts %}
+            {% for post in site.categories.work %}
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="overview__item">
-                        <a href="#">
+                        <a href="{{ post.url }}">
                             {% if post.thumbnail %}
                                 <img src="{{ post.thumbnail }}" title="{{ post.title }}" class="img-responsive" />
                             {% else %}
@@ -38,6 +38,5 @@ title: "Victoria Redmond"
         </div>
     </div>    
 </div>
-
 
 
