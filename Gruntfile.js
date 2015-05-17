@@ -133,6 +133,14 @@ module.exports = function (grunt) {
             files: {
               '<%= yeoman.app %>/assets/styles/main.css': ['<%= yeoman.app %>/assets/styles/main.less']
             }
+          },
+          production: {
+            options: {
+              paths: ["assets/css"],
+            },
+            files: {
+              "path/to/result.css": "path/to/source.less"
+            }
           }
         },
         // not used since Uglify task does concat,
@@ -301,7 +309,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
-        'less:development',
         'copy:server',
         'jekyll',
         'useminPrepare',
