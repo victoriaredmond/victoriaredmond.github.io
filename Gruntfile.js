@@ -167,7 +167,6 @@ module.exports = function (grunt) {
         'gh-pages': {
             options: {
               base: '<%= yeoman.jekyll %>',
-              dotfiles: true,
               branch: 'master'
             },
             src: ['**/*']
