@@ -177,7 +177,7 @@ module.exports = function (grunt) {
               base: '<%= yeoman.jekyll %>',
               branch: 'master'
             },
-            src: ['**/*']
+            src: ['**']
         },
         useminPrepare: {
             html: '<%= yeoman.jekyll %>/index.html',
