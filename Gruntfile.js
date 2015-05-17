@@ -166,10 +166,11 @@ module.exports = function (grunt) {
         },
         'gh-pages': {
             options: {
-              base: 'dist',
+              base: '<%= yeoman.jekyll %>',
+              dotfiles: true,
               branch: 'master'
             },
-            src: ['**']
+            src: ['**/*']
         },
         useminPrepare: {
             html: '<%= yeoman.jekyll %>/index.html',
