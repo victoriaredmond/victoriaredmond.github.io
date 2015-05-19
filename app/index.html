@@ -3,7 +3,7 @@ layout: default
 title: "Victoria Redmond"
 ---
 
-<div class="hero">
+<!-- <div class="hero">
     <div class="container">
         <div class="owl-carousel owl-hero">
             {% for post in site.posts %}
@@ -17,11 +17,11 @@ title: "Victoria Redmond"
             {% endfor %}
         </div>
     </div>
-</div>
+</div> -->
 <div class="overview">
     <div class="container">
         <div class="row">
-            {% for post in site.categories.work %}
+            {% for post in site.categories.work reversed %}
                 <div class="col-xs-12 col-md-6">
                     <div class="overview__item">
                         <a href="{{ post.url }}">
