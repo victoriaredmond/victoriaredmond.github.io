@@ -7034,6 +7034,84 @@ body {
   color: #fff;
 }
 /* Work */
+.portfolio-container {
+  margin-bottom: 30px;
+}
+.portfolio-container:first-child {
+  padding-top: 60px;
+}
+.portfolio-container .portfolio-container h2 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-family: 'Montserrat';
+}
+.owl-primary {
+  max-height: 627px;
+  overflow: hidden;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  -webkit-transition: all 200ms;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.owl-primary.active {
+  max-height: 313px;
+  overflow: hidden;
+}
+.owl-primary .item {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-primary .owl-dots {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  width: 50%;
+  text-align: right;
+}
+.owl-primary .owl-dot {
+  background: transparent;
+  border: 1px solid #808080;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  display: inline-block;
+  height: 5px;
+  margin: 0 1%;
+  width: 5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  pointer-events: all;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  -webkit-transition: all 200ms;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.owl-primary .owl-dot.active {
+  background: #676767;
+  border: 1px solid #676767;
+}
+.portfolio-info {
+  padding: 15px 0 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  -webkit-transition: all 200ms;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-info.active {
+  max-height: 313px;
+  opacity: 1;
+}
+.portfolio-options {
+  padding: 10px 0 0;
+}
 .footer {
   padding: 22px 0 15px;
 }
