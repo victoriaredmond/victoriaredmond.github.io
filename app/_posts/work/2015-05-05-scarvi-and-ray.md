@@ -1,5 +1,5 @@
 ---
-layout: portfolio
+layout: post
 category: work
 title: Scavi And Ray
 thumbnail: /assets/images/work/scavi-and-ray/thumbnail.jpg

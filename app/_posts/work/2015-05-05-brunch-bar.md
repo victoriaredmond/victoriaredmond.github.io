@@ -1,5 +1,5 @@
 ---
-layout: portfolio
+layout: post
 category: work
 title: Brunch Bar
 thumbnail: /assets/images/work/brunch-bar/thumbnail.jpg

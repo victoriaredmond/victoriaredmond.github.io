@@ -1,5 +1,5 @@
 ---
-layout: portfolio
+layout: post
 category: work
 title: Personal Branding
 thumbnail: /assets/images/work/personal-branding/thumbnail.jpg

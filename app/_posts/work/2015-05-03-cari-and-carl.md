@@ -1,5 +1,5 @@
 ---
-layout: portfolio
+layout: post
 category: work
 title: Cari + Carl
 thumbnail: /assets/images/work/cari-and-carl/thumbnail.jpg

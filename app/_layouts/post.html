@@ -1,8 +1,25 @@
 ---
 layout: default
-title: This is just a placeholder post
 ---
 
-<h1>{{ post.title }}</h1>
+<div class="post">
+	<div class="container">
+		<h2 class="post__title">{{ page.title }}</h2>
+		<div class="post__info">
+			{{ content }}
+		</div>
+	    <div class="post__images">
+	    <div class="row">
+    		{% for slides in page.carousel %}
+	        <div class="col-xs-12 col-sm-6">
+	        	<a href="{{ slides.image }}" data-rel="lightcase:myCollection" title="{{ post.title }}">
+	        		<img src="{{ slides.image }}" class="post__images-img img-responsive" title="{{ post.title }}" />
+	        	</a>
+	        </div>
+	        {% endfor %}
+    	</div>
+	    </div> 
+	</div>
+</div>
 
-{{ content }}
+

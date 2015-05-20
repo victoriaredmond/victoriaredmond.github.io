@@ -1,32 +1,30 @@
 ---
 layout: default
-title: "Work"
+title: "VR / Work"
 ---
 
 <div class="portfolio">
     <div class="container">
-        <div class="row">
-            {% for post in site.categories.work reversed %}
-                <div class="owl-carousel-container portfolio-container">
-                    <h2>{{ post.title }}</h2>
-                    {% if post.carousel %}
-                    <div class="owl-carousel owl-primary">
+        {% for post in site.categories.work reversed %}
+            <div class="portfolio-container">
+                <h2>{{ post.title }}</h2>
+                {% if post.carousel %}
+                <a href="{{ post.url }}">
+                    <div class="portfolio-images">
                         {% for slides in post.carousel %}
-                        <div class="item">
-                            <img src="{{ slides.image }}" class="img-responsive" title="{{ post.title }}" />
-                        </div>
+                        <img src="{{ slides.image }}" class="img-responsive" title="{{ post.title }}" />
                         {% endfor %}
                     </div>
-                    {% endif %}
-                    <div class="portfolio-info">
-                        {{ post.content }}
-                    </div>
-                    <div class="portfolio-options">
-                        <button class="btn btn-primary font-brand portfolio-options__more-info js-about-work">More Info</button>
-                    </div>
+                </a>
+                {% endif %}
+                <div class="portfolio-info">
+                    {{ post.content }}
                 </div>
-            {% endfor %}
-        </div>
+                <div class="portfolio-options">
+                    <button class="btn btn-primary font-brand portfolio-options__more-info js-about-work">More Info</button>
+                </div>
+            </div>
+        {% endfor %}
     </div>    
 </div>
 

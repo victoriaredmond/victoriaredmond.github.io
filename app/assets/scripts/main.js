@@ -1,11 +1,3 @@
-$('.owl-primary').owlCarousel({
-	items: 1,
-	loop: true,
-	center: true,
-	autoplay: true,
-	autoplaySpeed: 500
-});
-
 // Toggle About Content
 $('.js-toggle-about').on('click', function(e){
 	e.preventDefault();
@@ -26,8 +18,26 @@ $('.js-about-work').on('click', function(){
     var self = $(this),
     	parent = self.parents('.portfolio-container');
 
-    	// 0.o whyyyyyy ?? I didnt see, its opening all of them lol 
-        $('.portfolio-info', parent).toggleClass('active');
-        $('.owl-primary', parent).toggleClass('active');
-    
+    $('.portfolio-info', parent).toggleClass('active');
+    $('.portfolio-images', parent).toggleClass('active'); 
 });
+
+// Responsive Crossfade Slides
+$(".portfolio-images").responsiveSlides({
+	speed: 1500,
+	timeout: 7000,
+	namespace: '.portfolio-images'
+});
+
+// Start Lightcase
+$('a[data-rel^=lightcase]').lightcase({
+	maxWidth: 1200,
+	maxHeight: 800,
+	swipe: true
+});
+
+// Start Masonry For Posts
+// $('.js-masonry').masonry({ 
+//   animate: true,
+//   isAnimated: !Modernizr.csstransitions
+// });
