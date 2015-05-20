@@ -15,7 +15,9 @@ $('.js-toggle-about').on('click', function(e){
 
 // When You Click Any Link In The Navbar Close It After
 $('.navbar-nav li a').on('click', function(){
-	$('.navbar-toggle').trigger('click');
+	if(window.innerWidth < 769){
+		$('.navbar-toggle').trigger('click');	
+	}
 });
 
 
