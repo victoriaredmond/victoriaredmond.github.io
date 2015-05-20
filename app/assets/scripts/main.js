@@ -16,10 +16,15 @@ $('.js-toggle-about').on('click', function(e){
 // View Portfolio Information
 $('.js-about-work').on('click', function(){
     var self = $(this),
-    	parent = self.parents('.portfolio-container');
+    	parent = self.parents('.portfolio-container'),
+    	infoHeight = $('.portfolio-info div', parent).height();
 
-    $('.portfolio-info', parent).toggleClass('active');
-    $('.portfolio-images', parent).toggleClass('active'); 
+	if($('.portfolio-info', parent).hasClass('active')){
+		$('.portfolio-info', parent).removeClass('active').css('max-height', '0');
+	}else{
+		$('.portfolio-info', parent).addClass('active').css('max-height', infoHeight+30);
+	}
+    
 });
 
 // Responsive Crossfade Slides
