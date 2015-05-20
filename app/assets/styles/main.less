@@ -2,6 +2,7 @@
 @import (less) "../../bower_components/owl.carousel/dist/assets/owl.carousel.min.css";
 
 @import "../../bower_components/lightcase/dist/css/lightcase.css";
+@import "../../bower_components/csshake/dist/csshake.min.css";
 
 @iconSpritePath: "../images/glyphicons-halflings.png";
 @iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
@@ -50,7 +51,10 @@ body{
 		font-size: 12px;
 		font-family: 'Montserrat';
 		text-align: center;
-	  	transition: all 200ms cubic-bezier(0.4,0,0.2,1);
+		-o-transition: all 200ms cubic-bezier(0.4,0,0.2,1);
+		-moz-transition: all 200ms cubic-bezier(0.4,0,0.2,1);
+		-webkit-transition: all 200ms cubic-bezier(0.4,0,0.2,1);
+		transition: all 200ms cubic-bezier(0.4,0,0.2,1);
 	}
 	.primary-logo-mobile{
 		color: #000;
@@ -76,6 +80,9 @@ body{
 			padding-top: 12px;
 			padding-bottom: 8px;
 			opacity: .7;
+			-o-transition: all 200ms cubic-bezier(0.4,0,0.2,1);
+			-moz-transition: all 200ms cubic-bezier(0.4,0,0.2,1);
+			-webkit-transition: all 200ms cubic-bezier(0.4,0,0.2,1);
 			transition: all 200ms cubic-bezier(0.4,0,0.2,1);
 		}
 	}
@@ -124,6 +131,9 @@ body{
 		    position: absolute;
 		    left: 50%;
 		    top: 50%;
+		    -o-transform: translate(-50%,-50%);
+		    -moz-transform: translate(-50%,-50%);
+		    -webkit-transform: translate(-50%,-50%);
 		    transform: translate(-50%,-50%);
 		}
 	}
@@ -157,6 +167,9 @@ body{
 		a{
 			color: darken(#fff, 20%);
 			text-decoration: none;
+			-o-transition: color 200ms @transition-style;
+			-moz-transition: color 200ms @transition-style;
+			-webkit-transition: color 200ms @transition-style;
 			transition: color 200ms @transition-style;
 			will-change: color;
 			&:hover{
@@ -183,7 +196,6 @@ body{
 }
 
 .portfolio-images{
-	max-height: 627px;
 	list-style: none;
 	overflow: hidden;
 	width: 100%;
@@ -262,18 +274,25 @@ body{
 	h1{
 		margin: 0 0 5px;
 		line-height: 9px;
+  		display: inline-block;
 		a{
-		display: inline-block;
+			display: inline-block;
 		}
 	}
 	a{
 		color: #AEAEAE;
+		-o-transition: color 200ms @transition-style;
+		-moz-transition: color 200ms @transition-style;
+		-webkit-transition: color 200ms @transition-style;
 		transition: color 200ms @transition-style;
 		will-change: color;
 		&:hover{
 			color: #3D3D3D;
 			text-decoration: none;
 		}
+	}
+	small{
+		display: block;
 	}
 }
 
@@ -346,6 +365,9 @@ body{
 		    -webkit-transform: scale(1);
 		    -ms-transform: scale(1);
 		    transform: scale(1);
+		    -o-transition: transform 250ms @transition-style;
+		    -moz-transition: transform 250ms @transition-style;
+		    -webkit-transition: transform 250ms @transition-style;
 		    transition: transform 250ms @transition-style;
 		    will-change: transform;
 		}
@@ -358,7 +380,13 @@ body{
 		    top: 0;
 		    left: 0;
 		    opacity: 0;
+		    -o-transition: opacity 200ms @transition-style;
+		    -moz-transition: opacity 200ms @transition-style;
+		    -webkit-transition: opacity 200ms @transition-style;
 		    transition: opacity 200ms @transition-style;
+		    -webkit-transition: opacity 200ms @transition-style;
+		    -moz-transition: opacity 200ms @transition-style;
+		    -o-transition: opacity 200ms @transition-style;
 		    will-change: opacity;
 			h2 {
 				background: none;
@@ -372,8 +400,14 @@ body{
 			    position: absolute;
 			    left: 50%;
 			    top: 50%;
+			    -o-transform: translate(-50%,-587%);
+			    -mz-transform: translate(-50%,-587%);
+			    -webkit-transform: translate(-50%,-587%);
 			    transform: translate(-50%,-587%);
-			    transition: transform 200ms @transition-style;
+				transition: transform 200ms @transition-style;
+				-webkit-transition: transform 200ms @transition-style;
+				-moz-transition: transform 200ms @transition-style;
+				-o-transition: transform 200ms @transition-style;
 			    will-change: transform;
 			}
 		}
@@ -386,7 +420,10 @@ body{
 			.overview__fig {
 				opacity: 1;
 			    h2 {
-				    transform: translate(-50%,-50%);
+					-o-transform: translate(-50%,-50%);
+					-moz-transform: translate(-50%,-50%);
+					-webkit-transform: translate(-50%,-50%);
+					transform: translate(-50%,-50%);
 				    transition-delay: 150ms;
 				}
 			}
@@ -465,6 +502,9 @@ body{
 			a{
 				color: darken(#fff, 20%);
 				text-decoration: none;
+				-o-transition: color 200ms @transition-style;
+				-moz-transition: color 200ms @transition-style;
+				-webkit-transition: color 200ms @transition-style;
 				transition: color 200ms @transition-style;
 				will-change: color;
 				&:hover{

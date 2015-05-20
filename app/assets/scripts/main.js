@@ -13,6 +13,12 @@ $('.js-toggle-about').on('click', function(e){
 	}	
 });
 
+// When You Click Any Link In The Navbar Close It After
+$('.navbar-nav li a').on('click', function(){
+	$('.navbar-toggle').trigger('click');
+});
+
+
 // View Portfolio Information
 $('.js-about-work').on('click', function(){
     var self = $(this),
